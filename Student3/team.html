@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>team</title>
+    <link rel="stylesheet" href="shared.css">
+    <style>
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+footer {
+    position: relative;
+}
+#heading {
+    position: relative;
+    font-family: serif;
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 999;
+    margin-top: 150px;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.teamBody {
+    text-align: center;
+}
+.team {
+    margin-top: 100px; 
+}
+.content{
+    text-align: left;
+}
+.thumbnail {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
+.thumbnail img {
+    width: 250px;
+    height: 250px;
+    transition: transform 1s;
+}
+.details {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    opacity: 0.7;
+    visibility: hidden;
+}
+.thumbnail:hover {
+    padding: 3px;
+    background-color: azure;
+}
+.thumbnail:hover .details {
+    opacity: 1;
+    visibility: visible;
+    
+}
+.thumbnail img:hover {
+    opacity: 0.5;
+}
+    </style>
+</head>
+<body class = "teamBody">
+  <header>
+    <div id="page-logo">
+      <a href="/index.html">Harmony Health Oasis</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="\Student2\homepage.html">Home</a></li>
+        <li><a href="\Student1\shop.html">Shop</a></li>
+        <li><a href="\Student4\Gallery.html">Gallery</a></li>
+        <li><a href="profile.html">User Profile</a></li>
+        <li><a href="\Student4\sitemap.html">Site Map</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="\Student2\feedback4.html">Feedback</a></li>
+
+      </ul>
+    </nav>
+  </header>
+    <div id = "heading">
+        <h1>OUR TEAM </h1>
+        <h3  style = "font-family: consolas;">About Us - hover over image for more details!</h3>
+    </div>
+    
+    <!-- video background -->
+    <!-- How to - fullscreen video (no date) How To Create a Fullscreen Video Background. -->
+    <video autoplay muted loop id="myVideo">
+        <source src="video2.mp4" type="video/mp4">
+      </video>
+
+    <!-- team members section -->  
+    <div class = "team">
+        <div class = "thumbnail">
+            <!-- team member 1 -->
+            <img src = "thulani.JPG" alt ="girl">
+            <div class = "details">
+                <h3> Thulani Kaltuwawa </h3>
+                <p> Student role: student 1 </p>
+                <p> Designed and implemented pages: </p>
+                <ul class = "content">
+                    <li> Splash screen </li>
+                    <li> Shop </li>
+                    <li> Content page </li>
+                    <li> Page editor </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "thumbnail">
+            <!-- team member 2 -->
+            <img src = "mehara.JPG" alt ="girl">
+            <div class = "details">
+                <h3> Mehara Wilfred </h3>
+                <p> Student role: student 2 </p>
+                <p> Designed and implemented pages: </p>
+                <ul class = "content">
+                    <li> Home page + Template + Nav </li>
+                    <li> Feedback </li>
+                    <li> Content page </li>
+                    <li> Page editor </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "thumbnail">
+            <!-- team member 3 -->
+            <img src = "gayathmi.JPG" alt ="girl">
+            <div class = "details">
+                <h3> Gayathmi Mehansa </h3>
+                <p> Student role: student 3 </p>
+                <p> Designed and implemented pages: </p>
+                <ul class = "content">
+                    <li> User profile </li>
+                    <li> Team </li>
+                    <li> Content page </li>
+                    <li> Page editor </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "thumbnail">
+            <!-- team member 4 -->
+            <img src = "tilmi.JPG" alt ="girl">
+            <div class = "details">
+                <h3> Tilmi Premarathna </h3>
+                <p> Student role: student 4 </p>
+                <p> Designed and implemented pages: </p>
+                <ul class = "content">
+                    <li> Gallery </li>
+                    <li> Sitemap </li>
+                    <li> Content page </li>
+                    <li> Page editor </li>
+                </ul>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <footer>
+        <ul>
+          <li>
+            <a href="https://www.youtube.com">
+              <img src="youtube.png" alt="Youtube logo" >
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com">
+              <img src="insta.png" alt="Instagram logo" >
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com">
+              <img src="facebook.png" alt="Facebook logo" >
+            </a>
+            
+          </li>
+          
+        </ul> 
+      <div class="contact-us">
+        <h1>Contact Us</h1>
+        <p>
+          <a href="\Student1\pageEditorStudent1.html">Editor 1 Page</a><br>
+        <a href="\Student2\pageEditorStudent2.html">Editor 2 Page</a><br>
+        <a href="pageEditorStudent3.html">Editor 3 Page</a><br>
+        <a href="\Student4\pageEditorStudent4.html">Editor 4 Page</a><br>
+  
+          +94 77-659 1726<br>
+  
+          0:00 om-8:00 pm (Mon-Fri)<br>
+          0:00 am-4:00 pm (Sat-Sun)<br>
+          <a href="mailto:mail@HarmonyhealthOasis.com" class="email">mail@HarmonyhealthOasis.com</a><br>
+        </p>
+      </div>
+  
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+      </footer>
+      
+      <script>
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+  </script>    
+</body>
+</html>

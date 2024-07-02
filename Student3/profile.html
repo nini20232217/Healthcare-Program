@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="shared.css">
+    <style>
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.userbody {
+    background-image:url("medicine4.jpg");
+    text-align: center;
+    margin-top: 30px;
+}
+ 
+#main-container {
+    background-color: rgb(245, 245, 220);
+    text-align: center;
+    margin-top: 20px;
+    border: 3px solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    padding: 60px;
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 200px;
+}
+
+#button-container {
+    margin-top: 20px;
+}
+#previous, #skip, #next-button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#previous {
+    background-color: cornflowerblue;
+}
+#skip {
+    background-color:#b4929a;
+}
+#next-button {
+    background-color:darkseagreen;
+}
+#progress-container {
+    margin: 20px;
+    width: 100%;
+}
+#progressBar {
+    margin-top: 10px;
+    width: 0%; 
+    height: 30px; 
+    background-color: #326d30;
+}
+.percentage {
+    height: 100%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+#userProfile-container {
+    text-align: left;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 10px;
+    margin: 20px auto 20px auto;
+    width: 30%;
+}
+#start-container {
+    margin-top: 400px;
+    margin-bottom: 350px;
+}
+#start {
+    width: 200px;
+    height: 80px;
+    font-size: 30px;
+    border: 3px solid;
+    border-radius: 20px;
+    border-color: black;
+    background-color: #b8b0ae;
+}
+
+</style>
+</head>
+<body class = "userbody">
+    <header>
+        <div id="page-logo">
+          <a href="/index.html">Harmony Health Oasis</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="\Student2\homepage.html">Home</a></li>
+                <li><a href="\Student1\shop.html">Shop</a></li>
+                <li><a href="\Student4\Gallery.html">Gallery</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="\Student4\sitemap.html">Site Map</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="\Student2\feedback4.html">Feedback</a></li>
+        
+              </ul>
+        </nav>
+      </header>
+    <div id="start-container">
+        <button id = "start" onclick="showForm()">Start</button> <!-- start button -->
+    </div>
+    
+    <div id = "form-container" style="display: none;">
+        <div id="main-container">
+            <!-- display category information and question number -->
+            <p id="categoryInfo"><p>
+            <!-- display current question -->
+            <label id="questionLabel">Your Answer: </label> <br><br>
+            <input type="text" id="answerInput"> <!-- input field for users answer -->
+    
+            <div id="button-container">
+                <button id = "previous" onclick="prevQuestion()">Previous</button> <!-- previous button -->
+                <button id = "skip" onclick="skip()">Skip</button> <!-- skip button -->
+                <button id = "next-button" onclick="nextQuestion()">Next</button> <!-- next button -->
+            </div>
+            
+            <!-- display progress -->
+            <div id="progression-container">
+                <div id="progressBar"></div> <!-- progress bar -->
+            </div>
+            <label class="percentage" id="percentage">Percentage:0</label> <!-- percenatge -->
+        </div>
+        <!-- display user profile progress -->
+        <div id="userProfile-container">
+            <h3 style="text-align: center;">User Profile:</h3> <!-- user profile -->
+            <p id="profileInput"></p>
+        </div>
+    </div>       
+    <script>
+        //array containing the questions
+        const questions = [
+            {
+                catagory: "personal details",
+                question: "What is your name?",
+                questionNumber: 1,
+                catagoryNumber: 1,
+                catagoryQuestionNumber: 1,
+                TotalQuestionsInCatagory: 4,
+                profileName: "Name: "
+            },
+            {
+                catagory: "personal details",
+                question: "What is your surname?",
+                questionNumber: 2,
+                catagoryNumber: 1,
+                catagoryQuestionNumber: 2,
+                TotalQuestionsInCatagory: 4,
+                profileName: "Surame: "
+            },
+            {
+                catagory: "personal details",
+                question: "What is your age?",
+                questionNumber: 3,
+                catagoryNumber: 1,
+                catagoryQuestionNumber: 3,
+                TotalQuestionsInCatagory: 4,
+                profileName: "Age: "
+            },
+            {
+                catagory: "personal details",
+                question: "What is your gender?",
+                questionNumber: 4,
+                catagoryNumber: 1,
+                catagoryQuestionNumber: 4,
+                TotalQuestionsInCatagory: 4,
+                profileName: "Gender: "
+            },
+            {
+                catagory: "tasks",
+                question: "What brigns you to do this cause?",
+                questionNumber: 5,
+                catagoryNumber: 2,
+                catagoryQuestionNumber: 1,
+                TotalQuestionsInCatagory: 5,
+                profileName: "Rational: "
+            },
+            {
+                catagory: "tasks",
+                question: "what is your task?",
+                questionNumber: 6,
+                catagoryNumber: 2,
+                catagoryQuestionNumber: 2,
+                TotalQuestionsInCatagory: 5,
+                profileName: "Task: "
+            },
+            {
+                catagory: "tasks",
+                question: "The description of assignment:",
+                questionNumber: 7,
+                catagoryNumber: 2,
+                catagoryQuestionNumber: 3,
+                TotalQuestionsInCatagory: 5,
+                profileName: "DOA: "
+            },
+            {
+                catagory: "tasks",
+                question: "Where is the place of assignment?",
+                questionNumber: 8,
+                catagoryNumber: 2,
+                catagoryQuestionNumber: 4,
+                TotalQuestionsInCatagory: 5,
+                profileName: "Place: "
+            },
+            {
+                catagory: "tasks",
+                question: "What is the type of assignment?",
+                questionNumber: 9,
+                catagoryNumber: 2,
+                catagoryQuestionNumber: 5,
+                TotalQuestionsInCatagory: 5,
+                profileName: "Type: "
+            },
+            {
+                catagory: "qualifications",
+                question: "What is your main field of study?",
+                questionNumber: 10,
+                catagoryNumber: 3,
+                catagoryQuestionNumber: 1,
+                TotalQuestionsInCatagory: 5,
+                profileName: "Field Of Study: "
+            },
+            {
+                catagory: "qualifications",
+                question: "What is your Highest degree?",
+                questionNumber: 11,
+                catagoryNumber: 3,
+                catagoryQuestionNumber: 2,
+                TotalQuestionsInCatagory: 5,
+                profileName: "Degree: "
+            },
+            {
+                catagory: "qualifications",
+                question: "What is your University?",
+                questionNumber: 12,
+                catagoryNumber: 3,
+                catagoryQuestionNumber: 3,
+                TotalQuestionsInCatagory: 5,
+                profileName: "University: "
+            },
+            {
+                catagory: "qualifications",
+                question: "What is your year of graduation?",
+                questionNumber: 13,
+                catagoryNumber: 3,
+                catagoryQuestionNumber: 4,
+                TotalQuestionsInCatagory: 5,
+                profileName: "Year: "
+            },
+            {
+                catagory: "qualification",
+                question: "What is your country?",
+                questionNumber: 14,
+                catagoryNumber: 3,
+                catagoryQuestionNumber: 5,
+                TotalQuestionsInCatagory: 5,
+                profileName: "Country: "
+            },
+            {
+                catagory: "contacts",
+                question: "What is your telephone number?",
+                questionNumber: 15,
+                catagoryNumber: 4,
+                catagoryQuestionNumber: 1,
+                TotalQuestionsInCatagory: 2,
+                profileName: "Telephone: "
+            },
+            {
+                catagory: "contacts",
+                question: "What is your email?",
+                questionNumber: 16,
+                catagoryNumber: 4,
+                catagoryQuestionNumber: 2,
+                TotalQuestionsInCatagory: 2,
+                profileName: "Email: "
+            }
+        ]
+
+        //array to store the user's answers
+        let answers = [];
+        //variable to show the current index
+        let currentIndex = 0;
+
+        //function to show the form
+        function showForm() {
+            document.getElementById("start-container").style.display = "none";
+            document.getElementById("form-container").style.display = "block";
+        }
+
+        //function to update the display with the current question
+        function updateQuestionDisplay() {
+            //get the current question
+            const question = questions[currentIndex];
+            //update the categoryInfo and questionLable
+            document.getElementById("categoryInfo")
+            .textContent = `Step ${question.catagoryNumber}: ${question.catagory} | Qestion ${question.catagoryQuestionNumber}/${question.TotalQuestionsInCatagory}`;
+            
+            document.getElementById("questionLabel")
+            .textContent = `${question.question}`;
+        }
+
+        //function to update and display the user profile
+        function updateProfileDisplay() {
+            const profileContainer = document.getElementById("profileInput");
+            profileContainer.innerHTML = ""; // Clear the previous content
+        
+            //loop through the answers array and display the profile information
+            for (let i = 0; i < answers.length; i++) {
+                const profileItem = document.createElement("p");
+                profileItem.textContent = `${answers[i].profileName} ${answers[i].answer}`;
+                profileContainer.appendChild(profileItem);
+            }
+        }
+
+        //function to validate if the input is a number
+        function isNumber(value) {
+            return /^\d+$/.test(value);
+        }
+
+        //funtion to falidate if the input is a valid email
+        //GfG (2023) JavaScript program to validate an email address, GeeksforGeeks.
+        function isValidEmail(value){
+            const email = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return email.test(value);
+        }
+
+        //function to move to the next question
+        function nextQuestion() {
+            const answerInput = document.getElementById("answerInput").value;
+            const profileName = questions[currentIndex].profileName;
+            const questionNumber = questions[currentIndex].questionNumber;
+
+            //validate inputs based on question type
+            if (questionNumber === 3 || questionNumber === 13 || questionNumber === 15) {
+                if (!isNumber(answerInput)) {
+                    alert("Please enter a valid number.");
+                    return;
+                }
+            }
+
+            if (questionNumber === 16) {
+                if(!isValidEmail(answerInput)) {
+                    alert("Please enter a valid email.");
+                    return;
+                }
+            }
+
+
+            //store user's answer
+            if (answerInput.trim() !== ""){
+                
+                const existingAnswerIndex = answers.findIndex(
+                (answer) => answer.questionNumber === questionNumber
+                );
+
+                if (existingAnswerIndex !== -1) {
+                    answers[existingAnswerIndex].answer = answerInput;
+                }else {
+                    answers.push({
+                        questionNumber: questionNumber,
+                        answer: answerInput,
+                        profileName: profileName,
+                    });
+                }
+                
+            document.getElementById("answerInput").value = "";
+
+            }else {
+                alert("Please provide an answer");
+                return;
+            }
+
+            //move to next question
+            if(currentIndex < questions.length - 1) {
+                currentIndex++;
+                updateQuestionDisplay();
+            }
+            updateProfileDisplay();
+            updateProgressBar();
+            
+        }
+
+        //function to skip to the next question
+        function skip() {
+            if(currentIndex < questions.length -1) {
+                currentIndex++;
+                updateQuestionDisplay();
+            }
+        }
+
+        //function to move to the previous question
+        function prevQuestion() {
+            if(currentIndex > 0) {
+                currentIndex--;
+                updateQuestionDisplay();
+            }
+        }
+
+        //function to update the progress bar
+        function updateProgressBar() {
+            const progressBar = document.getElementById("progressBar");
+            const total = questions.length;
+            const completed = answers.length;
+            const progressPercentage = (completed/total) * 100;
+            progressBar.style.width = progressPercentage + "%";
+
+            const progressPercentageRounded = Math.round((completed / total) * 100);
+            document.getElementById("percentage")
+            .textContent = `Percentage : ${progressPercentageRounded} `;
+        }
+        
+        //initial update of question dislay
+        updateQuestionDisplay();
+        
+        //footer back to top
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+<footer>
+    <ul>
+      <li>
+        <a href="https://www.youtube.com">
+          <img src="youtube.png" alt="Youtube logo" >
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com">
+          <img src="insta.png" alt="Instagram logo" >
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com">
+          <img src="facebook.png" alt="Facebook logo" >
+        </a>
+        
+      </li>
+      
+    </ul> 
+   <div class="contact-us">
+    <h1>Contact Us</h1>
+    <p>
+        <a href="\Student1\pageEditorStudent1.html">Editor 1 Page</a><br>
+        <a href="\Student2\pageEditorStudent2.html">Editor 2 Page</a><br>
+        <a href="pageEditorStudent3.html">Editor 3 Page</a><br>
+        <a href="\Student4\pageEditorStudent4.html">Editor 4 Page</a><br>
+
+      +94 77-659 1726<br>
+
+      0:00 om-8:00 pm (Mon-Fri)<br>
+      0:00 am-4:00 pm (Sat-Sun)<br>
+      <a href="mailto:mail@HarmonyhealthOasis.com" class="email">mail@HarmonyhealthOasis.com</a><br>
+    </p>
+  </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+  </footer>
+    
+</body>
+</html>
