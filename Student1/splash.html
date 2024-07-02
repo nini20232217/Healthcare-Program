@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Health Oasis</title>
+
+    <style>
+      .splash-body {
+        background-color: #093824;
+        height: 100%;
+        overflow: hidden;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        margin-top: -3%;
+        
+      }
+      .intro {
+        color: azure;
+        font-size: 4em;
+        text-align: left;
+        margin-bottom: 2px;
+        margin-top: 2px; /* Adjusting the gap between the words*/
+      }
+      .word {
+        color: palevioletred;
+        font-size: 4em;
+        margin-top: 1px;
+        margin-bottom: 2px;
+      }
+      .mission {
+        font-family: cursive;
+        color: azure;
+        width: 600px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        font-size: 1.5em;
+      }
+      #word {
+        color: palevioletred;
+      }
+      .intro-container {
+        text-align: right;
+        max-width: 600px;
+        margin-top: 9%;
+        margin-left: 5%;
+        float: left;
+      }
+      .mission-container {
+        text-align: left;
+      }
+      h1,
+      h3 {
+        text-align: left;
+      }
+      .continue {
+        font-size: 1.4em;
+        color: #093824;
+        padding: 20px 20px;
+        margin-left: 0%;
+        margin-top: 7%;
+        margin-right: 70%;
+      }
+      .intro-img1 img {
+        width: 450px;
+        height: 650px;
+        margin-left: 0%;
+        margin-right: -95%;
+        margin-top: -99%;
+        float: right;
+      }
+      .intro-img2 img {
+        width: 600px;
+        height: 400px;
+        margin-left: 0%;
+        margin-right: -198%;
+        margin-top: -105%;
+        float: right;
+      }
+      .intro-img3 img {
+        width: 600px;
+        height: 385px;
+        margin-left: 0%;
+        margin-right: -198%;
+        margin-top: -37%;
+        float: right;
+      }
+      .intro-img1 img,
+      .intro-img2 img,
+      .intro-img3 img {
+        animation: bounce 2s infinite alternate;
+      }
+
+      @keyframes bounce {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-10px);
+        }
+      }
+      .members-container {
+        color: #ffffff;
+        position: absolute;
+        bottom: 1%;
+        text-align: center;
+        font-size: 1.09em;
+      }
+
+      .members li {
+        display: inline;
+        margin: 6px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body class="splash-body">
+    <div class="intro-container">
+      <h1 class="intro">Feel confident,</h1>
+      <h1 class="intro">Balanced, and At</h1>
+      <h1 class="word">Peace</h1>
+      <br>
+      <div class="mission-container">
+        <h3 class="mission">
+          Discover a curated collection of high-quality products designed to
+          support your well being.From daily supplements to medical devices, we
+          have everything you need for a healthier lifestyle.
+        </h3>
+        <h3 class="mission">Shop with confidence at Harmony Health Oasis,</h3>
+        <h3 class="mission" id="word">Your happiness is our priority.</h3>
+      </div>
+
+      <button class="continue"><b>SHOP NOW! </b></button>
+
+      <div class="intro-img1">
+        <img src="./splash/face_mask.jpg" alt="face mask" />
+      </div>
+      <div class="intro-img2">
+        <img src="splash/woman.jpg" alt="woman" />
+      </div>
+      <div class="intro-img3">
+        <img src="splash/drinks.jpg" alt="" />
+      </div>
+      <div class="members-container">
+        <ul class="members">
+          <li>| Our Team :</li>
+          <li>Thulani Kalatuwawa |</li>
+          <li>Mehara Wilfred |</li>
+          <li>Gayathmi Mohottige |</li>
+          <li>Tilmi Thishara |</li>
+        </ul>
+      </div>
+    </div>
+  <script>
+    // JavaScript function to redirect after 4 seconds
+    function redirectToMain() {
+      window.location.href = "shop.html";
+    }
+
+    // Redirect to main.html after 4 seconds
+    setTimeout(redirectToMain, 4000);
+  </script>
+  </body>
+</html>
