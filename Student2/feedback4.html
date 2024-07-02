@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="./shared.css"> 
+  <style>
+    /* Body styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #8aab89;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Form container styles */
+    #feedback-form {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #6fc377;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /*Form Style 
+    .full-form{
+        margin-top: 20px;
+    }
+    */
+    /* Heading styles */
+    h2 {
+        color: #000000;
+    }
+    
+    /* Form group styles */
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    /* Label styles */
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+    
+    /* Input styles */
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    /* Radio button and checkbox styles */
+    .radio-buttons {
+        margin-top: 5px;
+    }
+    
+    /* Button styles */
+    button {
+        padding: 10px 20px;
+        background-color: #0f9500;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .modal-content {
+        background-color: #24512c;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 80%;
+    }
+    
+    /* Show modal */
+    .modal.show {
+        display: block;
+    }
+    
+    /* Error message styles */
+    .error {
+        color: #ff0000;
+        font-size: 0.8em;
+    }
+    
+    /* Confirmation modal styles */
+    #confirmation-modal {
+        display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="page-logo">
+      <a href="./homepage.html">Harmony Health Oasis</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./homepage.html">Home</a></li>
+        <li><a href="\Student1\shop.html">Shop</a></li>
+        <li><a href="\Student4\Gallery.html">Gallery</a></li>
+        <li><a href="\Student3\profile.html">User Profile</a></li>
+        <li><a href="\Student4\sitemap.html">Site Map</a></li>
+        <li><a href="\Student3\team.html">Our Team</a></li>
+        <li><a href="./feedback4.html">Feedback</a></li>
+
+      </ul>
+    </nav>
+  </header>
+<br>
+  
+    <div id="feedback-form">
+    <h1>Feedback Form</h1>
+    <form class="full-form" id="feedback-form">
+      <div class="form-group">
+        <label for="name">Enter your name: *</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error"></span>
+      </div>
+      <div class="form-group">
+        <label for="email">Enter your email: *</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error"></span>
+      </div>
+      <div class="form-group">
+        <label for="first-visit">Was this your first time visiting?</label>
+        <div class="radio-buttons">
+          <label for="yes-first-visit"><input type="radio" id="yes-first-visit" name="first-visit" value="yes"> Yes</label>
+          <label for="no-first-visit"><input type="radio" id="no-first-visit" name="first-visit" value="no"> No</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="informative">Was this website informative and easy to navigate through?</label>
+        <div class="radio-buttons">
+          <label for="yes-informative"><input type="radio" id="yes-informative" name="informative" value="yes"> Yes</label>
+          <label for="no-informative"><input type="radio" id="no-informative" name="informative" value="no"> No</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="improvements">If "No", suggest any improvements for the future:</label>
+        <textarea id="improvements" name="improvements" rows="4" cols="50"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="satisfaction">How satisfied are you with Our services? Choose from 0 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!"</label>
+        <select id="satisfaction" name="satisfaction">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="recommend">Would you recommend our services?</label>
+        <div class="radio-buttons">
+          <label for="yes-recommend"><input type="radio" id="yes-recommend" name="recommend" value="yes"> Yes</label>
+          <label for="no-recommend"><input type="radio" id="no-recommend" name="recommend" value="no"> No</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="updates">Would you like to receive updates about the website and any offers?</label>
+        <label for="yes-updates"><input type="checkbox" id="yes-updates" name="updates" value="yes"> Yes via Email</label>
+      </div>
+      <div class="form-group">
+        <label for="questions">Do you have any additional questions or requests?</label>
+        <textarea id="questions" name="questions" rows="4" cols="50"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+      <button type="button" id="preview-button">Preview Feedback</button>
+      <div id="preview-modal" class="modal">
+        <div class="modal-content">
+          <h2>Feedback Summary</h2>
+          <p>Name: <span id="preview-name"></span></p>
+          <p>Email: <span id="preview-email"></span></p>
+          <button type="button" id="edit-feedback">Edit</button>
+          <button type="button" id="submit-feedback">Submit Feedback</button>
+        </div>
+      </div>
+      <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+          <h2>Thank You!</h2>
+          <p>Your feedback has been received.</p>
+          <button type="button" id="close-confirmation">Close</button>
+        </div>
+      </div>
+    </form>
+  
+  <footer>
+    <ul>
+      <li>
+        <a href="https://www.youtube.com">
+          <img src="./images/icons/youtube.png" alt="Youtube logo" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com">
+          <img src="./images/icons/insta.png" alt="Instagram logo" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com">
+          <img src="./images/icons/facebook.png" alt="Facebook logo" />
+        </a>
+        
+      </li>
+      
+    </ul> 
+   <div class="contact-us">
+    <h1>Contact Us</h1>
+    <p>
+      <a href="\Student1\pageEditorStudent1.html">Editor 1 Page</a><br>
+          <a href="./pageEditorStudent2.html">Editor 2 Page</a><br>
+          <a href="\Student3\pageEditorStudent3.html">Editor 3 Page</a><br>
+          <a href="\Student4\pageEditorStudent4.html">Editor 4 Page</a><br>
+
+      +94 77-659 1726<br>
+
+      0:00 om-8:00 pm (Mon-Fri)<br>
+      0:00 am-4:00 pm (Sat-Sun)<br>
+      <a href="mailto:mail@HarmonyhealthOasis.com" class="email">mail@HarmonyhealthOasis.com</a><br>
+    </p>
+  </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+  </footer>
+
+  <script>
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('feedback-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Validate name
+    const nameInput = document.getElementById('name');
+    const nameError = document.querySelector('#name + .error');
+    if (nameInput.value.trim() === '') {
+      nameError.textContent = 'Please enter your name.';
+      return;
+    } else {
+      nameError.textContent = '';
+    }
+
+    // Validate email
+    const emailInput = document.getElementById('email');
+    const emailError = document.querySelector('#email + .error');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value.trim())) {
+      emailError.textContent = 'Please enter a valid email address.';
+      return;
+    } else {
+      emailError.textContent = '';
+    }
+
+    // Submit the form if all validations pass
+    submitForm();
+  });
+
+  function submitForm() {
+    // Here you can handle the form submission
+    // For now, let's just show a confirmation modal
+    const confirmationModal = document.getElementById('confirmation-modal');
+    confirmationModal.style.display = 'block';
+  }
+
+  // Preview Feedback Button
+  const previewButton = document.getElementById('preview-button');
+  previewButton.addEventListener('click', function() {
+    // Populate preview modal with form data
+    const previewName = document.getElementById('preview-name');
+    const previewEmail = document.getElementById('preview-email');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+
+    previewName.textContent = nameInput.value;
+    previewEmail.textContent = emailInput.value;
+
+    // Show the preview modal
+    const previewModal = document.getElementById('preview-modal');
+    previewModal.style.display = 'block';
+  });
+
+  // Close preview modal
+  const editFeedbackButton = document.getElementById('edit-feedback');
+  editFeedbackButton.addEventListener('click', function() {
+    const previewModal = document.getElementById('preview-modal');
+    previewModal.style.display = 'none';
+  });
+
+  // Close confirmation modal
+  const closeConfirmationButton = document.getElementById('close-confirmation');
+  closeConfirmationButton.addEventListener('click', function() {
+    const confirmationModal = document.getElementById('confirmation-modal');
+    confirmationModal.style.display = 'none';
+  });
+});
+
+</script>
+</body>
+</html>
