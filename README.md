@@ -27,5 +27,7 @@ The website includes the following main pages:
 - **Content Page** - [All Students]
 - **Page Editor** - [All Students]
 
+As student 1, I was responsible for developing the Splash Screen and Shop pages.
 
+I designed and implemented the introductory splash screen that welcomes users to the SDG website. and created and managed the shop page where users can browse and purchase items related to maintaining good health.
 
