@@ -1,0 +1,87 @@
+#main {
+  height: 800px;
+  background-image: url(../Student2/images/galleryImages/background7.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#main-content {
+  width: 900px;
+  background-color: rgba(51, 47, 47, 0.8);
+  box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  border-radius: 8px;
+  text-align: center;
+  padding: 50px 0;
+  margin: 0 auto;
+  position: relative;
+  top: 250px;
+}
+
+#items {
+  padding: 24px;
+  /*background: linear-gradient(0deg, rgb(227, 255, 253), rgb(202, 243, 240));*/
+  background-image: url(./images/galleryImages/harmony-health-zen-stones-green-oasis-wellbeing_983420-138707.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#items h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(1, 8, 7);
+  margin: 24px 0;
+}
+
+#healthcares {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.healthcare {
+  margin: 0 20px;
+  text-transform: uppercase;
+}
+
+.healthcare p {
+  text-align: center;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  margin: 20px 0;
+}
+
+.healthcare img {
+  height: 200px;
+  width: 100%;
+  box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.healthcare strong {
+  color: rgb(0, 234, 171);
+}
+
+
+/* go top button */
+#myBtn {
+  bottom: 100px;
+  right: 5px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(23, 95, 12);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 6px;
+  margin-left: 30px;
+}
+
+#myBtn:hover {
+  background-color: rgb(21, 160, 0);
+}

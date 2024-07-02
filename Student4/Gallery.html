@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="headerfooter.css">
+<link rel="stylesheet" href="shared.css" />
+<link rel="stylesheet" href="content.css" />
+<link rel="stylesheet" href="styles.css" />
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+        background-image: url('Images/background1.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+    header{
+      
+        position: fixed;
+        width: 100%;
+        top: 0;
+        
+        z-index: 100000;
+    }
+    .heading{
+        width: 50%;
+        padding-bottom:50px ;
+    }
+    .heading h3{
+    font-size: 3em;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #222;
+    }
+    .heading h3 span{
+    font-weight: 100;   
+    }
+    .gallery {
+      margin-top: 180px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+       
+    }
+    .gallery-item {
+        width: calc(33.33%-20px);
+        height: 670px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        z-index:-1;
+    }
+    .gallery-item .text-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+    .gallery-item:hover .text-overlay {
+        transform: translateY(0);
+    }
+    
+</style>
+</head>
+<body>
+    <header>
+        <div id="page-logo">
+          <a href="/mainpage2.html">Harmony Health Oasis</a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="\Student2\homepage.html">Home</a></li>
+            <li><a href="\Student1\shop.html">Shop</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="\Student3\profile.html">User Profile</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+            <li><a href="\Student3\team.html">Our Team</a></li>
+            <li><a href="\Student2\feedback4.html">Feedback</a></li>
+    
+          </ul>
+        </nav>
+      </header>
+      <br>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Images/1.jpg" alt="cleanse">
+            <div class="text-overlay">
+                <h1>Skin care</h1>
+                <p>Skin care involves a range of practices and products designed to maintain the health and appearance of the skin. It includes cleansing, moisturizing, protecting from sun damage, and addressing specific concerns like acne or aging. Effective skin care often involves using gentle products suitable for your skin type, establishing a consistent routine, and protecting the skin from environmental stressors. Regular care can help improve skin texture, prevent breakouts, minimize signs of aging, and promote overall skin health.</p>
+            </div>
+        </div>
+    
+        <div class="gallery-item">
+            <img src="Images/2.jpg" alt="yoga">
+            <div class="text-overlay">
+                <h1>Yoga for a healthy life</h1>
+                <p>Skin care involves a range of practices and products designed to maintain the health and appearance of the skin. It includes cleansing, moisturizing, protecting from sun damage, and addressing specific concerns like acne or aging. Effective skin care often involves using gentle products suitable for your skin type, establishing a consistent routine, and protecting the skin from environmental stressors. Regular care can help improve skin texture, prevent breakouts, minimize signs of aging, and promote overall skin health.</p>
+            </div>
+        </div>
+        <div class="gallery-item" id="galleryE">
+            <img src="Images/3.jpg" alt="mats">
+            <div class="text-overlay">
+                <h1>Yoga mats</h1>
+                <p>Yoga mats are essential accessories used during yoga practice to provide a comfortable and stable surface. Typically made from materials like PVC, TPE, rubber, or natural fibers like cotton or jute, yoga mats offer cushioning for joints and support for various yoga poses. They also help prevent slipping and sliding, ensuring safety and stability during practice. Yoga mats come in various thicknesses, lengths, and designs to suit different preferences and needs. Some mats are eco-friendly, made from recycled materials or sustainable resources. Regularly cleaning and maintaining your yoga mat is important for hygiene and durability, prolonging its lifespan for continued use during yoga sessions.</p>
+            </div>
+        </div>
+      
+        <div class="gallery-item">
+            <img src="Images/4.jpg" alt="gua sha tool">
+            <div class="text-overlay">
+                <h1> Gua Sha Tool and Face Oils</h1>
+                <p>This image features two key components of a holistic skincare routine. The gua sha tool, traditionally used in Chinese medicine, promotes lymphatic drainage and circulation, reducing puffiness and enhancing skin elasticity. Paired with face oils, which are rich in nourishing botanical extracts and essential fatty acids, this combination deeply hydrates and rejuvenates the skin. The gua sha tool aids in the absorption of the oils, maximizing their benefits for a radiant complexion. Together, they embody the principles of natural skincare, promoting healthy, glowing skin from within.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="Images/5.jpg" alt="exfoliating tools">
+            <div class="text-overlay">
+                <h1>Essentials for Luxurious Body Wash Experience</h1>
+                <p>This image showcases essential items for a rejuvenating bath experience. Included are exfoliating tools such as loofahs, brushes, or sponges, which help to remove dead skin cells, stimulate circulation, and promote smoother skin texture. Accompanying these tools are organic body scrubs made from natural ingredients like sugar, salt, or coffee grounds, which provide gentle exfoliation and nourishment for the skin. Together, these elements create a luxurious and invigorating bathing ritual, leaving the skin feeling refreshed, renewed, and revitalized.</p>
+            </div>
+        </div>
+    
+        
+    </div>
+    <br>
+    <footer>
+      <ul>
+        <li>
+          <a href="https://www.youtube.com">
+            <img src="./Images/youtube.png" alt="Youtube logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com">
+            <img src="./Images/insta.png" alt="Instagram logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com">
+            <img src="./Images/facebook.png" alt="Facebook logo" />
+          </a>
+  
+        </li>
+  
+      </ul>
+      <div class="contact-us">
+        <h1>Contact Us</h1>
+        <p>
+          <a href="pageEditorStudent4.html">Editors Page</a><br>
+          +94 77-659 1726<br>
+  
+          0:00 om-8:00 pm (Mon-Fri)<br>
+          0:00 am-4:00 pm (Sat-Sun)<br>
+          <a href="mailto:youremail@HarmonyhealthOasis.com" class="email">youremail@yourdomain.com</a><br>
+        </p>
+      </div>
+  
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+    </footer>
+
+    <script>
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+}
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitemap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="content.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://cdn.pixabay.com/photo/2018/01/31/07/36/secret-3120483_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .tree {
+    margin-top: 240px;
+    
+    background-color: rgba(161, 200, 174, 0.5);
+    padding: 20px;
+  }
+
+  .tree ul {
+    position: relative;
+    padding: 1em 0;
+    white-space: nowrap;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .tree ul::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+
+  .tree li {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+  }
+
+  .tree li::before,
+  .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 3px solid #e4110d;
+    width: 50%;
+    height: 20px;
+  }
+
+  .tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 3px solid #e4110d;
+  }
+
+  .tree li:only-child::before,
+  .tree li:only-child::after {
+    display: none;
+  }
+
+  .tree li:only-child {
+    padding-top: 0;
+  }
+
+  .tree li:first-child::before,
+  .tree li:last-child::after {
+    border: 0 none;
+  }
+
+  .tree li:last-child::before {
+    border-right: 3px solid #e4110d;
+    border-radius: 0 5px 0 0;
+  }
+
+  .tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+  }
+
+  .tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 3px solid #e4110d;
+    width: 0;
+    height: 20px;
+  }
+
+  .tree a {
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: #96f99e;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .tree a:hover {
+    background: #3d853f;
+  }
+
+
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+    
+   
+    align-items: center;
+  }
+
+  
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  footer{
+    margin-top: 100px;
+    bottom: 0;
+
+  }
+</style>
+
+<body>
+  <header>
+    <div id="page-logo">
+      <a href="/index.html">Harmony Health Oasis</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="\Student2\homepage.html">Home</a></li>
+        <li><a href="\Student1\shop.html">Shop</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="\Student3\profile.html">User Profile</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li><a href="\Student3\team.html">Our Team</a></li>
+        <li><a href="\Student2\feedback4.html">Feedback</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <div class="tree">
+    <ul>
+      <li>
+        <a href="\Student2\homepage.html">Home</a>
+        <p> </p>
+        <ul>
+
+          <li>
+            <a href="\Student1\shop.html">Shop</a>
+            <p> </p>
+
+
+          </li>
+
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="\Student3\profile.html">User Profile</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="\Student2\feedback4.html">Feedback</a></li>
+          <li><a href="\Student3\team.html">Team</a></li>
+          <li>
+            <a href="\Student2\homepage.html#items">Content Page</a>
+            <p> </p>
+            <ul>
+              <li><a href="\Student1\content1.html">Physical Health</a></li>
+              <li><a href="\Student2\conentPagenew.html">Mental Health</a></li>
+              <li><a href="\Student3\emotionalHealth.html">Emotional Health</a></li>
+              <li><a href="contentPage.html">Social Connections</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pageEditorStudent4.html">Page editors</a>
+
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <footer>
+    <ul>
+      <li>
+        <a href="https://www.youtube.com">
+          <img src="./Images/youtube.png" alt="Youtube logo" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com">
+          <img src="./Images/insta.png" alt="Instagram logo" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com">
+          <img src="./Images/facebook.png" alt="Facebook logo" />
+        </a>
+
+      </li>
+
+    </ul>
+    <div class="contact-us">
+      <h1>Contact Us</h1>
+      <p>
+        <a href="pageEditorStudent4.html">Editors Page</a><br>
+        +94 77-659 1726<br>
+
+        0:00 om-8:00 pm (Mon-Fri)<br>
+        0:00 am-4:00 pm (Sat-Sun)<br>
+        <a href="mailto:youremail@HarmonyhealthOasis.com" class="email">youremail@yourdomain.com</a><br>
+      </p>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+  </footer>
+  <script>
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+</body>
+
+</html>
